@@ -1,3 +1,6 @@
+'''
+Contains psuedo-serializers for the system.
+'''
 from database import SessionLocal
 import models
 import schema

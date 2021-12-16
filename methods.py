@@ -12,6 +12,9 @@ from typing import List
 import serializers
 
 def add_to_befores(befores, uuid:int):
+    '''
+    Explodes the 'befores' list and adds each item to a new row in the befores_table.
+    '''
     db = SessionLocal()
     for item in list(befores):
         new_row = models.Befores(
@@ -23,6 +26,9 @@ def add_to_befores(befores, uuid:int):
 
 
 def add_to_afters(afters, uuid:int):
+    '''
+    Explodes the 'afters' list and adds each item to a new row in the afters_table.
+    '''
     db = SessionLocal()
     for item in list(afters):
         new_row = models.Afters(
@@ -33,6 +39,9 @@ def add_to_afters(afters, uuid:int):
         db.commit()
 
 def add_to_children(children, uuid:int):
+    '''
+    Explodes the 'children' list and adds each item to a new row in the children_table.
+    '''
     db = SessionLocal()
     for item in list(children):
         new_row = models.Children(
@@ -43,6 +52,9 @@ def add_to_children(children, uuid:int):
         db.commit()
 
 def add_to_attachments(attachments, uuid:int):
+    '''
+    Explodes the 'attachments' list and adds each item to a new row in the attachments_table.
+    '''
     db = SessionLocal()
     for item in list(attachments):
         new_row = models.Attachments(
@@ -53,6 +65,9 @@ def add_to_attachments(attachments, uuid:int):
         db.commit()
 
 def add_to_labels(labels, uuid:int):
+    '''
+    Explodes the 'labels' list and adds each item to a new row in the labels_table.
+    '''
     db = SessionLocal()
     for item in list(labels):
         new_row = models.Labels(
@@ -65,7 +80,7 @@ def add_to_labels(labels, uuid:int):
 
 def add_to_db(data: dict, db = SessionLocal()):
     """
-    Adds a new entry to the table.
+    Adds a new entry to the MAIN table.
     """
     key_list = data.keys()
 
@@ -147,13 +162,8 @@ def retrieve_from_db(db = SessionLocal()):
     """
     Retrieves all entries from the table.
     """
-    result_list = []
-    caps_list = db.query(models.Caps).all()
-    for item in caps_list:
-        result_list.append(serializers.capmodel_to_capschema(item))
-    return result_list
+    # TODO: Add a retrieve method.
 
 if __name__ == "__main__":
-    add_to_db()
-    returned_list=retrieve_from_db()
-    print(returned_list)
+    # TODO: Add test execution.
+    pass

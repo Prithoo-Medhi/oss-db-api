@@ -10,7 +10,7 @@ from database import Base
 
 class Results(Base):
     '''
-    Model/Table to contain capabilities for each test-case:
+    Model/Table to contain results for each test-case:
     '''
     __tablename__ = 'results'
 
@@ -30,6 +30,9 @@ class Results(Base):
     labels = Column(Boolean)
 
 class Befores(Base):
+    '''
+    Model to contain all the before processes for each test-report.
+    '''
     __tablename__ = 'befores'
 
     before_id = Column(Integer, primary_key=True, index=True)
@@ -37,6 +40,9 @@ class Befores(Base):
     data = Column(String)
 
 class Afters(Base):
+    '''
+    Model to contain all the after processes for each test-report.
+    '''
     __tablename__ = 'afters'
 
     after_id = Column(Integer, primary_key=True, index=True)
@@ -44,6 +50,9 @@ class Afters(Base):
     data = Column(String)
 
 class Children(Base):
+    '''
+    Model to contain all the child processes for each test-report.
+    '''
     __tablename__ = 'children'
 
     children_id = Column(Integer, primary_key=True, index=True)
@@ -51,6 +60,9 @@ class Children(Base):
     data = Column(String)
 
 class Attachments(Base):
+    '''
+    Model to contain all the attachment processes for each test-report.
+    '''
     __tablename__ = 'attachments'
 
     attachment_id = Column(Integer, primary_key=True, index=True)
@@ -58,6 +70,9 @@ class Attachments(Base):
     data = Column(String)
 
 class Labels(Base):
+    '''
+    Model to contain all the labels and tags for each test-report.
+    '''
     __tablename__ = 'labels'
 
     label_id = Column(Integer, primary_key=True, index=True)
