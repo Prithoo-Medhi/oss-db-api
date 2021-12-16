@@ -10,6 +10,7 @@ import models
 from sqlalchemy.orm import Session
 from database import SessionLocal
 from typing import List
+import serializers
 
 
 def add_to_db(db = SessionLocal()):
@@ -42,15 +43,13 @@ def retrieve_from_db(db = SessionLocal()):
     """
     Retrieves all entries from the table.
     """
+    result_list = []
     caps_list = db.query(models.Caps).all()
-    return caps_list
+    for item in caps_list:
+        result_list.append(serializers.capmodel_to_capschema(item))
+    return result_list
 
 if __name__ == "__main__":
     add_to_db()
     returned_list=retrieve_from_db()
-    for item in returned_list:
-        print(f"{item.cap_id}.")
-        print(item.device_type)
-        print(item.device_name)
-        print(item.browser_name)
-        print('##############################')
+    print(returned_list)
