@@ -7,32 +7,136 @@ from datetime import datetime
 from init import BASE_PATH
 from database import PGDATABASE, PGHOST, PGPORT, PGUSER, PGPASSWORD, DB_TYPE
 import models
-from sqlalchemy.orm import Session
 from database import SessionLocal
 from typing import List
 import serializers
 
+def add_to_befores(befores, uuid:int):
+    db = SessionLocal()
+    for item in list(befores):
+        new_row = models.Befores(
+            uuid = uuid,
+            data = str(item)
+        )
+        db.add(new_row)
+        db.commit()
 
-def add_to_db(db = SessionLocal()):
+
+def add_to_afters(afters, uuid:int):
+    db = SessionLocal()
+    for item in list(afters):
+        new_row = models.Afters(
+            uuid = uuid,
+            data = str(item)
+        )
+        db.add(new_row)
+        db.commit()
+
+def add_to_children(children, uuid:int):
+    db = SessionLocal()
+    for item in list(children):
+        new_row = models.Children(
+            uuid = uuid,
+            data = str(item)
+        )
+        db.add(new_row)
+        db.commit()
+
+def add_to_attachments(attachments, uuid:int):
+    db = SessionLocal()
+    for item in list(attachments):
+        new_row = models.Attachments(
+            uuid = uuid,
+            data = str(item)
+        )
+        db.add(new_row)
+        db.commit()
+
+def add_to_labels(labels, uuid:int):
+    db = SessionLocal()
+    for item in list(labels):
+        new_row = models.Labels(
+            uuid = uuid,
+            data = str(item)
+        )
+        db.add(new_row)
+        db.commit()
+
+
+def add_to_db(data: dict, db = SessionLocal()):
     """
     Adds a new entry to the table.
     """
-    device_type = 'Mobile'
-    device_name = 'Samsung Galaxy S10'
-    browser_name = 'Firefox 32.0'
-    screen_resolution = '1920x1080'
-    bs_run_mode = 'Headless'
-    is_device_real = True
-    network_type = '4G'
+    key_list = data.keys()
+
+    uuid = int(data['uuid'])
+    start, stop, status = None, None, ''
+    description, name, fullName = '', '', ''
+    testCaseId, historyId = '', ''
+
+    if 'start' in key_list:
+        start = data['start']
+
+    if 'stop' in key_list:
+        stop = data['stop']
+
+    if 'description' in key_list:
+        description = data['description']
+
+    if 'name' in key_list:
+        name = data['name']
+
+    if 'fullName' in key_list:
+        fullName = data['fullName']
+
+    if 'status' in key_list:
+        status = data['status']
+
+    if 'testCaseId' in key_list:
+        testCaseId = data['testCaseId']
+
+    if 'historyId' in key_list:
+        historyId = data['historyId']
+
+    if 'befores' in key_list:
+        befores = True
+        add_to_befores(data['befores'], data['uuid'])
+
+    if 'afters' in key_list:
+        afters = True
+        add_to_afters(data['afters'], data['uuid'])
+
+    if 'children' in key_list:
+        children = True
+        add_to_children(data['children'], data['uuid'])
+
+    if 'attachments' in key_list:
+        attachments = True
+        add_to_children(data['attachments'], data['uuid'])
+        
+    if 'labels' in key_list:
+        labels = True
+        add_to_children(data['labels'], data['uuid'])
 
 
-    new_entry = models.Caps(device_type = device_type,
-                            device_name = device_name,
-                            browser_name = browser_name,
-                            screen_resolution = screen_resolution,
-                            bs_run_mode = bs_run_mode,
-                            is_device_real = is_device_real,
-                            network_type = network_type)
+
+    new_entry = models.Results(
+        uuid = uuid,
+        start = start,
+        stop = stop,
+        description = description,
+        name = name,
+        fullName = fullName,
+        status = status,
+        testCaseId = testCaseId,
+        historyId = historyId,
+        # Array of booleans
+        befores = befores,
+        afters = afters,
+        children = children,
+        attachments = attachments,
+        labels = labels
+    )
 
     db.add(new_entry)
     db.commit()
