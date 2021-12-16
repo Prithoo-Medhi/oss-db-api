@@ -70,9 +70,9 @@ def add_to_db(data: dict, db = SessionLocal()):
     key_list = data.keys()
 
     uuid = int(data['uuid'])
-    start, stop, status = None, None, ''
-    description, name, fullName = '', '', ''
-    testCaseId, historyId = '', ''
+    start, stop, status = None, None, 'NA'
+    description, name, fullName = 'NA', 'NA', 'NA'
+    testCaseId, historyId = 'NA', 'NA'
 
     if 'start' in key_list:
         start = data['start']
@@ -113,7 +113,7 @@ def add_to_db(data: dict, db = SessionLocal()):
     if 'attachments' in key_list:
         attachments = True
         add_to_children(data['attachments'], data['uuid'])
-        
+
     if 'labels' in key_list:
         labels = True
         add_to_children(data['labels'], data['uuid'])
