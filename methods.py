@@ -4,10 +4,8 @@ Contains all functional methods (non-OOP) for the module.
 
 import psycopg2 as pg
 from datetime import datetime
-from init import BASE_PATH
-from database import PGDATABASE, PGHOST, PGPORT, PGUSER, PGPASSWORD, DB_TYPE
+from database import PGDATABASE, PGHOST, PGPORT, PGUSER, PGPASSWORD, DB_TYPE, SessionLocal
 import models
-from database import SessionLocal
 from typing import List
 import serializers
 
