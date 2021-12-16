@@ -2,7 +2,7 @@ from pydantic import BaseModel, Json
 import datetime
 from typing import List
 
-class Input_Tests(BaseModel):
+class Results(BaseModel):
     uuid: int
     start: datetime
     stop: datetime
