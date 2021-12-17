@@ -173,6 +173,11 @@ def retrieve_from_db(db = SessionLocal()):
     Retrieves all entries from the table.
     """
     # TODO: Add a retrieve method.
+    entry_list = []
+    entries = db.query(models.Results).all()
+    for entry in entries:
+        entry_list.append(serializers.resultmodel_to_resultchema(entry))
+    return entry_list
 
 if __name__ == "__main__":
     # TODO: Add test execution.

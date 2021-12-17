@@ -6,6 +6,7 @@ from sqlalchemy.sql.sqltypes import DateTime
 # from sqlalchemy.orm import relationship
 # from sqlalchemy.sql.schema import ForeignKey
 from database import Base
+import json
 
 
 class Results(Base):
@@ -38,6 +39,7 @@ class Befores(Base):
     before_id = Column(Integer, primary_key=True, index=True)
     uuid = Column(String)
     data = Column(String)
+
 
 class Afters(Base):
     '''

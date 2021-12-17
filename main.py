@@ -1,6 +1,6 @@
 from os import listdir
 from os.path import isfile, join
-from methods import add_to_db
+from methods import add_to_db, retrieve_from_db
 import json
 
 BASE_PATH = 'allureReport/'
@@ -33,4 +33,5 @@ def main():
         add_to_db(data_dict)
 
 if __name__ == "__main__":
-    main()
+    # main()
+    print(retrieve_from_db())

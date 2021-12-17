@@ -11,19 +11,18 @@ class Results(BaseModel):
     Schema to serialize the Results model.
     '''
 
-    uuid: int
-    # start: datetime
-    # stop: datetime
-    start: str
-    stop: str
-    description: str
-    name: str
-    fullName: str
-    status: str
-    testCaseId: int
-    historyId: str
-    befores: List[str]
-    afters: List[str]
-    children: List[str]
-    attachments: List[str]
-    labels: List[str]
+    uuid: any
+    
+    start: any
+    stop: any
+    description: any
+    name: any
+    fullName: any
+    status: any
+    testCaseId: any
+    historyId: any
+    befores: any
+    afters: any
+    children: any
+    attachments: any
+    labels: any

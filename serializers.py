@@ -3,9 +3,9 @@ Contains psuedo-serializers for the system.
 '''
 from database import SessionLocal
 import models
-import schema
+# import schema
 
-def resultmodel_to_resultchema(model: models.Results) -> schema.Results:
+def resultmodel_to_resultchema(model: models.Results) -> dict:
     """
     Converts a Results model to a Results schema.
     """
@@ -38,21 +38,21 @@ def resultmodel_to_resultchema(model: models.Results) -> schema.Results:
     else:
         labels_model = []
 
-    body = schema.Results(
-        uuid=model.uuid,
-        start=model.start,
-        stop=model.stop,
-        description=model.description,
-        name=model.name,
-        fullName=model.fullName,
-        status=model.status,
-        testCaseId=model.testCaseId,
-        historyId=model.historyId,
-        befores=before_model,
-        afters=after_model,
-        children=children_model,
-        attachments=attachments_model,
-        labels=labels_model
-    )
+    body = {
+        'uuid': model.uuid,
+        'start': model.start,
+        'stop': model.stop,
+        'description': model.description,
+        'name': model.name,
+        'fullName': model.fullName,
+        'status': model.status,
+        'testCaseId': model.testCaseId,
+        'historyId': model.historyId,
+        'befores': before_model,
+        'afters': after_model,
+        'children': children_model,
+        'attachments': attachments_model,
+        'labels': labels_model
+    }
 
     return body
