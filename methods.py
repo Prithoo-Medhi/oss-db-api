@@ -172,7 +172,6 @@ def retrieve_from_db(db = SessionLocal()):
     """
     Retrieves all entries from the table.
     """
-    # TODO: Add a retrieve method.
     entry_list = []
     entries = db.query(models.Results).all()
     for entry in entries:
