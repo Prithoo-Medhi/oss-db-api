@@ -2,9 +2,6 @@
 Contains the models for the database.
 '''
 from sqlalchemy import Column, Integer, String, ForeignKey, Boolean, DateTime, JSON
-from sqlalchemy.sql.sqltypes import DateTime
-# from sqlalchemy.orm import relationship
-# from sqlalchemy.sql.schema import ForeignKey
 from database import Base
 import json
 

@@ -94,15 +94,11 @@ def add_to_db(data: dict, db = SessionLocal()):
     if 'start' in key_list:
         # Because the start times is in milliseconds, we need to divide by 1000.
         start_stamp = data['start']/1000
-        print('\nstart: ')
-        print(start_stamp)
         start = datetime.datetime.fromtimestamp(start_stamp).strftime('%Y-%m-%d %H:%M:%S')
 
     if 'stop' in key_list:
         # Because the stop time is in milliseconds, we need to divide by 1000.
         stop_stamp = data['stop']/1000
-        print('\nstop: ')
-        print(stop_stamp)
         stop = datetime.datetime.fromtimestamp(stop_stamp).strftime('%Y-%m-%d %H:%M:%S')
 
     if 'description' in key_list:

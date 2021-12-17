@@ -3,7 +3,6 @@ Contains psuedo-serializers for the system.
 '''
 from database import SessionLocal
 import models
-# import schema
 
 def model_to_dict(model: any):
     """
