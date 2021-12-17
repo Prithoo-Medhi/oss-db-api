@@ -14,7 +14,7 @@ class Results(Base):
     '''
     __tablename__ = 'results'
 
-    uuid = Column(Integer, primary_key=True, index=True)
+    uuid = Column(String, primary_key=True, index=True)
     start = Column(DateTime)
     stop = Column(DateTime)  
     description = Column(String)
@@ -36,7 +36,7 @@ class Befores(Base):
     __tablename__ = 'befores'
 
     before_id = Column(Integer, primary_key=True, index=True)
-    uuid = Column(Integer)
+    uuid = Column(String)
     data = Column(String)
 
 class Afters(Base):
@@ -46,7 +46,7 @@ class Afters(Base):
     __tablename__ = 'afters'
 
     after_id = Column(Integer, primary_key=True, index=True)
-    uuid = Column(Integer)
+    uuid = Column(String)
     data = Column(String)
 
 class Children(Base):
@@ -56,7 +56,7 @@ class Children(Base):
     __tablename__ = 'children'
 
     children_id = Column(Integer, primary_key=True, index=True)
-    uuid = Column(Integer)
+    uuid = Column(String)
     data = Column(String)
 
 class Attachments(Base):
@@ -66,7 +66,7 @@ class Attachments(Base):
     __tablename__ = 'attachments'
 
     attachment_id = Column(Integer, primary_key=True, index=True)
-    uuid = Column(Integer)
+    uuid = Column(String)
     data = Column(String)
 
 class Labels(Base):
@@ -76,7 +76,7 @@ class Labels(Base):
     __tablename__ = 'labels'
 
     label_id = Column(Integer, primary_key=True, index=True)
-    uuid = Column(Integer)
+    uuid = Column(String)
     data = Column(String)
 
 

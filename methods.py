@@ -3,13 +3,15 @@ Contains all functional methods (non-OOP) for the module.
 '''
 
 import psycopg2 as pg
-from datetime import datetime
+import datetime
 from database import PGDATABASE, PGHOST, PGPORT, PGUSER, PGPASSWORD, DB_TYPE, SessionLocal
 import models
 from typing import List
 import serializers
+import json
+from time import gmtime
 
-def add_to_befores(befores, uuid:int):
+def add_to_befores(befores, uuid):
     '''
     Explodes the 'befores' list and adds each item to a new row in the befores_table.
     '''
@@ -17,13 +19,13 @@ def add_to_befores(befores, uuid:int):
     for item in list(befores):
         new_row = models.Befores(
             uuid = uuid,
-            data = str(item)
+            data = json.dumps(item)
         )
         db.add(new_row)
         db.commit()
 
 
-def add_to_afters(afters, uuid:int):
+def add_to_afters(afters, uuid):
     '''
     Explodes the 'afters' list and adds each item to a new row in the afters_table.
     '''
@@ -31,12 +33,12 @@ def add_to_afters(afters, uuid:int):
     for item in list(afters):
         new_row = models.Afters(
             uuid = uuid,
-            data = str(item)
+            data = json.dumps(item)
         )
         db.add(new_row)
         db.commit()
 
-def add_to_children(children, uuid:int):
+def add_to_children(children, uuid):
     '''
     Explodes the 'children' list and adds each item to a new row in the children_table.
     '''
@@ -44,12 +46,12 @@ def add_to_children(children, uuid:int):
     for item in list(children):
         new_row = models.Children(
             uuid = uuid,
-            data = str(item)
+            data = json.dumps(item)
         )
         db.add(new_row)
         db.commit()
 
-def add_to_attachments(attachments, uuid:int):
+def add_to_attachments(attachments, uuid):
     '''
     Explodes the 'attachments' list and adds each item to a new row in the attachments_table.
     '''
@@ -57,12 +59,12 @@ def add_to_attachments(attachments, uuid:int):
     for item in list(attachments):
         new_row = models.Attachments(
             uuid = uuid,
-            data = str(item)
+            data = json.dumps(item)
         )
         db.add(new_row)
         db.commit()
 
-def add_to_labels(labels, uuid:int):
+def add_to_labels(labels, uuid):
     '''
     Explodes the 'labels' list and adds each item to a new row in the labels_table.
     '''
@@ -70,7 +72,7 @@ def add_to_labels(labels, uuid:int):
     for item in list(labels):
         new_row = models.Labels(
             uuid = uuid,
-            data = str(item)
+            data = json.dumps(item)
         )
         db.add(new_row)
         db.commit()
@@ -82,18 +84,26 @@ def add_to_db(data: dict, db = SessionLocal()):
     """
     key_list = data.keys()
 
-    uuid = int(data['uuid'])
-    start, stop, status = None, None, 'NA'
+    uuid = data['uuid']
+    start, stop, status = 0, 0, 'NA'
     description, name, fullName = 'NA', 'NA', 'NA'
     testCaseId, historyId = 'NA', 'NA'
     befores, afters, children = False, False, False
     attachments, labels = False, False
 
     if 'start' in key_list:
-        start = data['start']
+        # Because the start times is in milliseconds, we need to divide by 1000.
+        start_stamp = data['start']/1000
+        print('\nstart: ')
+        print(start_stamp)
+        start = datetime.datetime.fromtimestamp(start_stamp).strftime('%Y-%m-%d %H:%M:%S')
 
     if 'stop' in key_list:
-        stop = data['stop']
+        # Because the stop time is in milliseconds, we need to divide by 1000.
+        stop_stamp = data['stop']/1000
+        print('\nstop: ')
+        print(stop_stamp)
+        stop = datetime.datetime.fromtimestamp(stop_stamp).strftime('%Y-%m-%d %H:%M:%S')
 
     if 'description' in key_list:
         description = data['description']

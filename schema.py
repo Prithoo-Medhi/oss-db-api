@@ -12,16 +12,18 @@ class Results(BaseModel):
     '''
 
     uuid: int
-    start: datetime
-    stop: datetime
+    # start: datetime
+    # stop: datetime
+    start: str
+    stop: str
     description: str
     name: str
     fullName: str
     status: str
     testCaseId: int
     historyId: str
-    befores: List[Json]
-    afters: List[Json]
-    children: List[Json]
-    attachments: List[Json]
-    labels: List[Json]
+    befores: List[str]
+    afters: List[str]
+    children: List[str]
+    attachments: List[str]
+    labels: List[str]

@@ -1,0 +1,13 @@
+{
+    "uuid": "78d7d344-30f9-4825-a0bf-3ca873ed0ab3",
+    "befores": [
+        {
+            "name": "selenium_patcher",
+            "status": "passed",
+            "start": 1639551158653,
+            "stop": 1639551158654
+        }
+    ],
+    "start": 1639551158653,
+    "stop": 1639551180987
+}
