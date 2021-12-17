@@ -16,8 +16,6 @@ def resultmodel_to_resultchema(model: models.Results) -> dict:
     """
     Converts a Results model to a Results schema.
     """
-    # body = {key : model.__dict__[key] for key in model.__dict__.keys() if not key.startswith('_')}
-
     db = SessionLocal()
 
     before_model = []
