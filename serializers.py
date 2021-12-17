@@ -5,6 +5,13 @@ from database import SessionLocal
 import models
 # import schema
 
+def model_to_dict(model: any):
+    """
+    Converts a model to a dictionary.
+    """
+    body = {key : model.__dict__[key] for key in model.__dict__.keys() if not key.endswith('_id')}
+    return body
+
 def resultmodel_to_resultchema(model: models.Results) -> dict:
     """
     Converts a Results model to a Results schema.
@@ -13,30 +20,36 @@ def resultmodel_to_resultchema(model: models.Results) -> dict:
 
     db = SessionLocal()
 
+    before_model = []
+    after_model = []
+    children_model = []
+    attachments_model = []
+    labels_model = []
+
     if model.befores:
-        before_model = db.query(models.Befores).filter(models.Befores.uuid == model.uuid).all()
-    else:
-        before_model = []
+        before_objects = db.query(models.Befores).filter(models.Befores.uuid == model.uuid).all()
+        for item in before_objects:
+            before_model.append(item.data)
 
     if model.afters:
-        after_model = db.query(models.Afters).filter(models.Afters.uuid == model.uuid).all()
-    else:
-        after_model = []
+        after_objects = db.query(models.Afters).filter(models.Afters.uuid == model.uuid).all()
+        for item in after_objects:
+            after_model.append(item.data)
 
     if model.children:
-        children_model = db.query(models.Children).filter(models.Children.uuid == model.uuid).all()
-    else:
-        children_model = []
+        children_objects = db.query(models.Children).filter(models.Children.uuid == model.uuid).all()
+        for item in children_objects:
+            children_model.append(item.data)
 
     if model.attachments:
-        attachments_model = db.query(models.Attachments).filter(models.Attachments.uuid == model.uuid).all()
-    else:
-        attachments_model = []
-
+        attachments_objects = db.query(models.Attachments).filter(models.Attachments.uuid == model.uuid).all()
+        for item in attachments_objects:
+            attachments_model.append(item.data)
+    
     if model.labels:
-        labels_model = db.query(models.Labels).filter(models.Labels.uuid == model.uuid).all()
-    else:
-        labels_model = []
+        labels_objects = db.query(models.Labels).filter(models.Labels.uuid == model.uuid).all()
+        for item in labels_objects:
+            labels_model.append(item.data)
 
     body = {
         'uuid': model.uuid,
