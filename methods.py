@@ -86,6 +86,8 @@ def add_to_db(data: dict, db = SessionLocal()):
     start, stop, status = None, None, 'NA'
     description, name, fullName = 'NA', 'NA', 'NA'
     testCaseId, historyId = 'NA', 'NA'
+    befores, afters, children = False, False, False
+    attachments, labels = False, False
 
     if 'start' in key_list:
         start = data['start']
