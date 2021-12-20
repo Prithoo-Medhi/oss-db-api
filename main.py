@@ -11,7 +11,7 @@ def file_list(directory='allureReport') -> list:
     '''
 
     files = [f for f in listdir(directory) if isfile(join(directory, f))]
-    print(files)
+    # print(files)
     return files
 
 def make_dict(file_name: str) -> dict:
@@ -20,7 +20,7 @@ def make_dict(file_name: str) -> dict:
     '''
     with open(file_name) as json_file:
         data = json.load(json_file)
-    print(data)
+    # print(data)
     return data
 
 def main():

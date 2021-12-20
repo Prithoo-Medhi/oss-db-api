@@ -79,11 +79,12 @@ def add_to_labels(labels, uuid):
 
 
 def add_to_db(data: dict, db = SessionLocal()):
-    """
-    Adds a new entry to the MAIN table.
-    """
+    '''
+    Adds a new entry to the 'results' table.
+    '''
     key_list = data.keys()
 
+    # Initializing with default values.
     uuid = data['uuid']
     start, stop, status = 0, 0, 'NA'
     description, name, fullName = 'NA', 'NA', 'NA'
@@ -91,8 +92,9 @@ def add_to_db(data: dict, db = SessionLocal()):
     befores, afters, children = False, False, False
     attachments, labels = False, False
 
+    # If a key is found in the dictionary, pull the corresponding value.
     if 'start' in key_list:
-        # Because the start times is in milliseconds, we need to divide by 1000.
+        # Because the start time is in milliseconds, we need to divide by 1000.
         start_stamp = data['start']/1000
         start = datetime.datetime.fromtimestamp(start_stamp).strftime('%Y-%m-%d %H:%M:%S')
 
@@ -140,7 +142,7 @@ def add_to_db(data: dict, db = SessionLocal()):
         add_to_children(data['labels'], data['uuid'])
 
 
-
+    # Committing to the 'results' table.
     new_entry = models.Results(
         uuid = uuid,
         start = start,
@@ -161,15 +163,15 @@ def add_to_db(data: dict, db = SessionLocal()):
 
     db.add(new_entry)
     db.commit()
-    db.refresh(new_entry)
-    print(new_entry)
+    # db.refresh(new_entry)
+    # print(new_entry)
 
 # TODO: Add a method to push to 'txt_config' table.
 
 def retrieve_from_db(db = SessionLocal()):
-    """
-    Retrieves all entries from the table.
-    """
+    '''
+    Retrieves all rows from the 'results' table.
+    '''
     entry_list = []
     entries = db.query(models.Results).all()
     for entry in entries:

@@ -13,7 +13,7 @@ import psycopg2
 
 load_dotenv()
 
-DB_TYPE = os.getenv('DB_TYPE')
+DB_TYPE = os.environ['DB_TYPE']
 PGHOST=os.environ['PGHOST']
 PGPORT=os.environ['PGPORT']
 PGDATABASE=os.environ['PGDATABASE']
