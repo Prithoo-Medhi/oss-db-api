@@ -1,931 +1,943 @@
 {
-	"uuid": "5199520a-a312-493d-845d-80dfe014ef89",
-	"start": 1639551151690,
-	"stop": 1639551180982,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "firefox_profile",
-			"status": "passed",
-			"start": 1639551151690,
-			"stop": 1639551151690
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "5199520a-a312-493d-845d-80dfe014ef89",
+    "start": 1639551151690,
+    "stop": 1639551180982,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "firefox_profile",
+            "status": "passed",
+            "start": 1639551151690,
+            "stop": 1639551151690
+        },
+        {
+            "name": "firefox_profile",
+            "status": "passed",
+            "start": 1639551151690,
+            "stop": 1639551151690
+        },
+        {
+            "name": "firefox_profile",
+            "status": "passed",
+            "start": 1639551151690,
+            "stop": 1639551151690
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "544d15c9-dddd-4e30-9550-9b821478b2a7",
-	"start": 1639551151690,
-	"stop": 1639551180991,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "firefox_path",
-			"status": "passed",
-			"start": 1639551151690,
-			"stop": 1639551151690
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "544d15c9-dddd-4e30-9550-9b821478b2a7",
+    "start": 1639551151690,
+    "stop": 1639551180991,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "firefox_path",
+            "status": "passed",
+            "start": 1639551151690,
+            "stop": 1639551151690
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "c853478b-ef4d-48ed-9887-83379d6d32fd",
-	"start": 1639551151687,
-	"stop": 1639551178347,
-	"description": "/home/rickey/Documents/techvariable/itt/OSS-Pytest-Plugin/temp/WorkingDir/tests-automation/custom_project/features/functional/sample.feature: OSS-TC-007: Particular element screenshot",
-	"name": "test_osstc007_particular_element_screenshot",
-	"fullName": "custom_project.step_definitions.test_application#test_osstc007_particular_element_screenshot",
-	"status": "passed",
-	"testCaseId": "44bd4c1b5197487e69f4dd2c988c0a99",
-	"historyId": "d07436d65405c3b51055cb1d8ea2a4b8",
-	"befores": [],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "c853478b-ef4d-48ed-9887-83379d6d32fd",
+    "start": 1639551151687,
+    "stop": 1639551178347,
+    "description": "/home/rickey/Documents/techvariable/itt/OSS-Pytest-Plugin/temp/WorkingDir/tests-automation/custom_project/features/functional/sample.feature: OSS-TC-007: Particular element screenshot",
+    "name": "test_osstc007_particular_element_screenshot",
+    "fullName": "custom_project.step_definitions.test_application#test_osstc007_particular_element_screenshot",
+    "status": "passed",
+    "testCaseId": "44bd4c1b5197487e69f4dd2c988c0a99",
+    "historyId": "d07436d65405c3b51055cb1d8ea2a4b8",
+    "befores": [],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "66aa2f5c-ffce-41d0-bfc0-8819e64863b3",
-	"start": 1639551151689,
-	"stop": 1639551180984,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "chrome_options",
-			"status": "passed",
-			"start": 1639551151689,
-			"stop": 1639551151689
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "66aa2f5c-ffce-41d0-bfc0-8819e64863b3",
+    "start": 1639551151689,
+    "stop": 1639551180984,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "chrome_options",
+            "status": "passed",
+            "start": 1639551151689,
+            "stop": 1639551151689
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "36a9b8bc-d8ea-4abc-ba6c-3862c4004827",
-	"start": 1639551151695,
-	"stop": 1639551180972,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "driver_path",
-			"status": "passed",
-			"start": 1639551151695,
-			"stop": 1639551151695
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "36a9b8bc-d8ea-4abc-ba6c-3862c4004827",
+    "start": 1639551151695,
+    "stop": 1639551180972,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "driver_path",
+            "status": "passed",
+            "start": 1639551151695,
+            "stop": 1639551151695
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "0d8e8a83-c444-4c4a-917b-e4a2d69dd1a7",
-	"start": 1639551151691,
-	"stop": 1639551180978,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "capabilities",
-			"status": "passed",
-			"start": 1639551151691,
-			"stop": 1639551151691
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "0d8e8a83-c444-4c4a-917b-e4a2d69dd1a7",
+    "start": 1639551151691,
+    "stop": 1639551180978,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "capabilities",
+            "status": "passed",
+            "start": 1639551151691,
+            "stop": 1639551151691
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "2156a3da-bb5b-45ce-8bb0-bb3d7ea22e3d",
-	"start": 1639551151690,
-	"stop": 1639551180989,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "session_capabilities",
-			"status": "passed",
-			"start": 1639551151690,
-			"stop": 1639551151690
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "2156a3da-bb5b-45ce-8bb0-bb3d7ea22e3d",
+    "start": 1639551151690,
+    "stop": 1639551180989,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "session_capabilities",
+            "status": "passed",
+            "start": 1639551151690,
+            "stop": 1639551151690
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "dfb6643d-6074-44e4-9517-39b0f9f9c8c2",
-	"start": 1639551151689,
-	"stop": 1639551180992,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "proxy_url",
-			"status": "passed",
-			"start": 1639551151689,
-			"stop": 1639551151689
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "dfb6643d-6074-44e4-9517-39b0f9f9c8c2",
+    "start": 1639551151689,
+    "stop": 1639551180992,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "proxy_url",
+            "status": "passed",
+            "start": 1639551151689,
+            "stop": 1639551151689
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "1e7ec9ee-20b3-43db-b8ba-a636b7eb6458",
-	"start": 1639551151685,
-	"stop": 1639551180995,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "sensitive_url",
-			"status": "passed",
-			"start": 1639551151685,
-			"stop": 1639551151685
-		}
-	],
-	"afters": [],
-	"children": [
-		"c853478b-ef4d-48ed-9887-83379d6d32fd"
-	],
-	"attachments": [],
-	"labels": []
+    "uuid": "1e7ec9ee-20b3-43db-b8ba-a636b7eb6458",
+    "start": 1639551151685,
+    "stop": 1639551180995,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "sensitive_url",
+            "status": "passed",
+            "start": 1639551151685,
+            "stop": 1639551151685
+        }
+    ],
+    "afters": [],
+    "children": [
+        "c853478b-ef4d-48ed-9887-83379d6d32fd"
+    ],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "1d2b5de1-08bc-48a3-ba1c-be9328a9cd72",
-	"start": 1639551151685,
-	"stop": 1639551180997,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "my_session_finish",
-			"status": "passed",
-			"start": 1639551151685,
-			"stop": 1639551151685
-		}
-	],
-	"afters": [
-		{
-			"name": "my_session_finish::_end",
-			"status": "passed",
-			"start": 1639551180996,
-			"stop": 1639551180997
-		}
-	],
-	"children": [
-		"c853478b-ef4d-48ed-9887-83379d6d32fd"
-	],
-	"attachments": [],
-	"labels": []
+    "uuid": "1d2b5de1-08bc-48a3-ba1c-be9328a9cd72",
+    "start": 1639551151685,
+    "stop": 1639551180997,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "my_session_finish",
+            "status": "passed",
+            "start": 1639551151685,
+            "stop": 1639551151685
+        }
+    ],
+    "afters": [
+        {
+            "name": "my_session_finish::_end",
+            "status": "passed",
+            "start": 1639551180996,
+            "stop": 1639551180997
+        }
+    ],
+    "children": [
+        "c853478b-ef4d-48ed-9887-83379d6d32fd"
+    ],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "78d7d344-30f9-4825-a0bf-3ca873ed0ab3",
-	"start": 1639551158653,
-	"stop": 1639551180987,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "selenium_patcher",
-			"status": "passed",
-			"start": 1639551158653,
-			"stop": 1639551158654
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "78d7d344-30f9-4825-a0bf-3ca873ed0ab3",
+    "start": 1639551158653,
+    "stop": 1639551180987,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "selenium_patcher",
+            "status": "passed",
+            "start": 1639551158653,
+            "stop": 1639551158654
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "01a7705f-bf07-4dab-88f3-4d0d6c4d2c25",
-	"start": 1639551151688,
-	"stop": 1639551180994,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "driver_class",
-			"status": "passed",
-			"start": 1639551151688,
-			"stop": 1639551151688
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "01a7705f-bf07-4dab-88f3-4d0d6c4d2c25",
+    "start": 1639551151688,
+    "stop": 1639551180994,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "driver_class",
+            "status": "passed",
+            "start": 1639551151688,
+            "stop": 1639551151688
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "c64d87ad-f6c5-4bea-8e79-f9e129a485b4",
-	"start": 1639551151696,
-	"stop": 1639551180969,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "driver",
-			"status": "passed",
-			"start": 1639551151696,
-			"stop": 1639551158651
-		}
-	],
-	"afters": [
-		{
-			"name": "driver::0",
-			"status": "passed",
-			"start": 1639551178922,
-			"stop": 1639551180969
-		}
-	],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "c64d87ad-f6c5-4bea-8e79-f9e129a485b4",
+    "start": 1639551151696,
+    "stop": 1639551180969,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "driver",
+            "status": "passed",
+            "start": 1639551151696,
+            "stop": 1639551158651
+        }
+    ],
+    "afters": [
+        {
+            "name": "driver::0",
+            "status": "passed",
+            "start": 1639551178922,
+            "stop": 1639551180969
+        }
+    ],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "e2027144-8bb2-4d5d-a4a8-dc495506dd1e",
-	"start": 1639551151682,
-	"stop": 1639551180999,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "pytestconfig",
-			"status": "passed",
-			"start": 1639551151682,
-			"stop": 1639551151682
-		}
-	],
-	"afters": [],
-	"children": [
-		"c853478b-ef4d-48ed-9887-83379d6d32fd"
-	],
-	"attachments": [],
-	"labels": []
+    "uuid": "e2027144-8bb2-4d5d-a4a8-dc495506dd1e",
+    "start": 1639551151682,
+    "stop": 1639551180999,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "pytestconfig",
+            "status": "passed",
+            "start": 1639551151682,
+            "stop": 1639551151682
+        }
+    ],
+    "afters": [],
+    "children": [
+        "c853478b-ef4d-48ed-9887-83379d6d32fd"
+    ],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "d4b1b338-f7f7-4419-92a0-c5fe1a31b414",
-	"start": 1639551151691,
-	"stop": 1639551180975,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "tmp_path",
-			"status": "passed",
-			"start": 1639551151691,
-			"stop": 1639551151694
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "d4b1b338-f7f7-4419-92a0-c5fe1a31b414",
+    "start": 1639551151691,
+    "stop": 1639551180975,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "tmp_path",
+            "status": "passed",
+            "start": 1639551151691,
+            "stop": 1639551151694
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "e9d88a2c-4f3c-4993-87cb-eb29e6aca1f6",
-	"start": 1639551151644,
-	"stop": 1639551181001,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "_session_faker",
-			"status": "passed",
-			"start": 1639551151644,
-			"stop": 1639551151682
-		}
-	],
-	"afters": [],
-	"children": [
-		"c853478b-ef4d-48ed-9887-83379d6d32fd"
-	],
-	"attachments": [],
-	"labels": []
+    "uuid": "e9d88a2c-4f3c-4993-87cb-eb29e6aca1f6",
+    "start": 1639551151644,
+    "stop": 1639551181001,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "_session_faker",
+            "status": "passed",
+            "start": 1639551151644,
+            "stop": 1639551151682
+        }
+    ],
+    "afters": [],
+    "children": [
+        "c853478b-ef4d-48ed-9887-83379d6d32fd"
+    ],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "608c354c-601d-4a01-8830-f96eceadfe2e",
-	"start": 1639551151691,
-	"stop": 1639551180976,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "driver_args",
-			"status": "passed",
-			"start": 1639551151691,
-			"stop": 1639551151691
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "608c354c-601d-4a01-8830-f96eceadfe2e",
+    "start": 1639551151691,
+    "stop": 1639551180976,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "driver_args",
+            "status": "passed",
+            "start": 1639551151691,
+            "stop": 1639551151691
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "9da7a4ed-9154-4807-b731-d2aaaec98625",
-	"start": 1639551151690,
-	"stop": 1639551180980,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "edge_options",
-			"status": "passed",
-			"start": 1639551151690,
-			"stop": 1639551151690
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "9da7a4ed-9154-4807-b731-d2aaaec98625",
+    "start": 1639551151690,
+    "stop": 1639551180980,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "edge_options",
+            "status": "passed",
+            "start": 1639551151690,
+            "stop": 1639551151690
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "f3549eb1-3d96-4d2a-be97-9053691d4cca",
-	"start": 1639551151691,
-	"stop": 1639551180988,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "tmp_path_factory",
-			"status": "passed",
-			"start": 1639551151691,
-			"stop": 1639551151691
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "f3549eb1-3d96-4d2a-be97-9053691d4cca",
+    "start": 1639551151691,
+    "stop": 1639551180988,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "tmp_path_factory",
+            "status": "passed",
+            "start": 1639551151691,
+            "stop": 1639551151691
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "cc1cafe7-0029-4ec2-b960-990f86fd56cf",
-	"start": 1639551151685,
-	"stop": 1639551180986,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "_skip_sensitive",
-			"status": "passed",
-			"start": 1639551151685,
-			"stop": 1639551151685
-		}
-	],
-	"afters": [],
-	"children": [
-		"c853478b-ef4d-48ed-9887-83379d6d32fd"
-	],
-	"attachments": [],
-	"labels": []
+    "uuid": "cc1cafe7-0029-4ec2-b960-990f86fd56cf",
+    "start": 1639551151685,
+    "stop": 1639551180986,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "_skip_sensitive",
+            "status": "passed",
+            "start": 1639551151685,
+            "stop": 1639551151685
+        }
+    ],
+    "afters": [],
+    "children": [
+        "c853478b-ef4d-48ed-9887-83379d6d32fd"
+    ],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "7a545e8d-a4eb-4c5b-b19d-468829fb71d5",
-	"start": 1639551172524,
-	"stop": 1639551178919,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "pytestbdd_then_Take a component screenshot '(?P<locator_path>.*)'",
-			"status": "passed",
-			"start": 1639551172525,
-			"stop": 1639551172525
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "7a545e8d-a4eb-4c5b-b19d-468829fb71d5",
+    "start": 1639551172524,
+    "stop": 1639551178919,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "pytestbdd_then_Take a component screenshot '(?P<locator_path>.*)'",
+            "status": "passed",
+            "start": 1639551172525,
+            "stop": 1639551172525
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "78528258-e13b-45a5-974b-724b0217c7b0",
-	"start": 1639551151688,
-	"stop": 1639551180985,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "pytestbdd_given_I navigate to external page '(?P<url>.*)'",
-			"status": "passed",
-			"start": 1639551151688,
-			"stop": 1639551151688
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "78528258-e13b-45a5-974b-724b0217c7b0",
+    "start": 1639551151688,
+    "stop": 1639551180985,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "pytestbdd_given_I navigate to external page '(?P<url>.*)'",
+            "status": "passed",
+            "start": 1639551151688,
+            "stop": 1639551151688
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "53241e56-7927-4d95-aae4-c70132a7c794",
-	"start": 1639551151682,
-	"stop": 1639551181000,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "_verify_url",
-			"status": "passed",
-			"start": 1639551151682,
-			"stop": 1639551151682
-		}
-	],
-	"afters": [],
-	"children": [
-		"c853478b-ef4d-48ed-9887-83379d6d32fd"
-	],
-	"attachments": [],
-	"labels": []
+    "uuid": "53241e56-7927-4d95-aae4-c70132a7c794",
+    "start": 1639551151682,
+    "stop": 1639551181000,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "_verify_url",
+            "status": "passed",
+            "start": 1639551151682,
+            "stop": 1639551151682
+        }
+    ],
+    "afters": [],
+    "children": [
+        "c853478b-ef4d-48ed-9887-83379d6d32fd"
+    ],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "6f00d857-6b4c-47aa-94a0-31691adc8560",
-	"start": 1639551151690,
-	"stop": 1639551180979,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "capabilities",
-			"status": "passed",
-			"start": 1639551151690,
-			"stop": 1639551151691
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "6f00d857-6b4c-47aa-94a0-31691adc8560",
+    "start": 1639551151690,
+    "stop": 1639551180979,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "capabilities",
+            "status": "passed",
+            "start": 1639551151690,
+            "stop": 1639551151691
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "556def5e-84bd-43ce-a39d-ee40e1efd3bd",
-	"start": 1639551151682,
-	"stop": 1639551181000,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "base_url",
-			"status": "passed",
-			"start": 1639551151682,
-			"stop": 1639551151682
-		}
-	],
-	"afters": [],
-	"children": [
-		"c853478b-ef4d-48ed-9887-83379d6d32fd"
-	],
-	"attachments": [],
-	"labels": []
+    "uuid": "556def5e-84bd-43ce-a39d-ee40e1efd3bd",
+    "start": 1639551151682,
+    "stop": 1639551181000,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "base_url",
+            "status": "passed",
+            "start": 1639551151682,
+            "stop": 1639551151682
+        }
+    ],
+    "afters": [],
+    "children": [
+        "c853478b-ef4d-48ed-9887-83379d6d32fd"
+    ],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "d5be5c3a-9289-459b-bf01-efcfaaec82f9",
-	"start": 1639551159140,
-	"stop": 1639551178919,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "browser",
-			"status": "passed",
-			"start": 1639551159140,
-			"stop": 1639551159477
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "d5be5c3a-9289-459b-bf01-efcfaaec82f9",
+    "start": 1639551159140,
+    "stop": 1639551178919,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "browser",
+            "status": "passed",
+            "start": 1639551159140,
+            "stop": 1639551159477
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "cf76523e-02c5-4327-b77c-921d61cd3dec",
-	"start": 1639551158652,
-	"stop": 1639551178921,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "selenium",
-			"status": "passed",
-			"start": 1639551158652,
-			"stop": 1639551158652
-		}
-	],
-	"afters": [
-		{
-			"name": "selenium::0",
-			"status": "passed",
-			"start": 1639551178921,
-			"stop": 1639551178921
-		}
-	],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "cf76523e-02c5-4327-b77c-921d61cd3dec",
+    "start": 1639551158652,
+    "stop": 1639551178921,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "selenium",
+            "status": "passed",
+            "start": 1639551158652,
+            "stop": 1639551158652
+        }
+    ],
+    "afters": [
+        {
+            "name": "selenium::0",
+            "status": "passed",
+            "start": 1639551178921,
+            "stop": 1639551178921
+        }
+    ],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "4b3676af-96b0-4e25-94b0-3c905536bdc2",
-	"start": 1639551151682,
-	"stop": 1639551180998,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "project_dir",
-			"status": "passed",
-			"start": 1639551151682,
-			"stop": 1639551151682
-		}
-	],
-	"afters": [],
-	"children": [
-		"c853478b-ef4d-48ed-9887-83379d6d32fd"
-	],
-	"attachments": [],
-	"labels": []
+    "uuid": "4b3676af-96b0-4e25-94b0-3c905536bdc2",
+    "start": 1639551151682,
+    "stop": 1639551180998,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "project_dir",
+            "status": "passed",
+            "start": 1639551151682,
+            "stop": 1639551151682
+        }
+    ],
+    "afters": [],
+    "children": [
+        "c853478b-ef4d-48ed-9887-83379d6d32fd"
+    ],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "55a4b5d6-3e6a-41b7-97d0-062a9aadf251",
-	"start": 1639551151690,
-	"stop": 1639551180990,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "session_capabilities",
-			"status": "passed",
-			"start": 1639551151690,
-			"stop": 1639551151690
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "55a4b5d6-3e6a-41b7-97d0-062a9aadf251",
+    "start": 1639551151690,
+    "stop": 1639551180990,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "session_capabilities",
+            "status": "passed",
+            "start": 1639551151690,
+            "stop": 1639551151690
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "8dc9c548-42fc-4073-9592-46d7bb717c86",
-	"start": 1639551151682,
-	"stop": 1639551180999,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "custom_browser_config",
-			"status": "passed",
-			"start": 1639551151682,
-			"stop": 1639551151682
-		}
-	],
-	"afters": [],
-	"children": [
-		"c853478b-ef4d-48ed-9887-83379d6d32fd"
-	],
-	"attachments": [],
-	"labels": []
+    "uuid": "8dc9c548-42fc-4073-9592-46d7bb717c86",
+    "start": 1639551151682,
+    "stop": 1639551180999,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "custom_browser_config",
+            "status": "passed",
+            "start": 1639551151682,
+            "stop": 1639551151682
+        }
+    ],
+    "afters": [],
+    "children": [
+        "c853478b-ef4d-48ed-9887-83379d6d32fd"
+    ],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "e7540f2c-9677-41d9-b6e1-48af6d4a5eec",
-	"start": 1639551151695,
-	"stop": 1639551180974,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "tmpdir",
-			"status": "passed",
-			"start": 1639551151695,
-			"stop": 1639551151695
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "e7540f2c-9677-41d9-b6e1-48af6d4a5eec",
+    "start": 1639551151695,
+    "stop": 1639551180974,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "tmpdir",
+            "status": "passed",
+            "start": 1639551151695,
+            "stop": 1639551151695
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "db5e2665-46d9-4532-bbbf-ec63bd81da59",
-	"start": 1639551151682,
-	"stop": 1639551180998,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "locators",
-			"status": "passed",
-			"start": 1639551151682,
-			"stop": 1639551151685
-		}
-	],
-	"afters": [],
-	"children": [
-		"c853478b-ef4d-48ed-9887-83379d6d32fd"
-	],
-	"attachments": [],
-	"labels": []
+    "uuid": "db5e2665-46d9-4532-bbbf-ec63bd81da59",
+    "start": 1639551151682,
+    "stop": 1639551180998,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "locators",
+            "status": "passed",
+            "start": 1639551151682,
+            "stop": 1639551151685
+        }
+    ],
+    "afters": [],
+    "children": [
+        "c853478b-ef4d-48ed-9887-83379d6d32fd"
+    ],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "b14bfd56-9e67-4ff3-9df9-aa21eff875d8",
-	"start": 1639551151690,
-	"stop": 1639551180981,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "firefox_options",
-			"status": "passed",
-			"start": 1639551151690,
-			"stop": 1639551151690
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "b14bfd56-9e67-4ff3-9df9-aa21eff875d8",
+    "start": 1639551151690,
+    "stop": 1639551180981,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "firefox_options",
+            "status": "passed",
+            "start": 1639551151690,
+            "stop": 1639551151690
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "a539e4f5-6f42-492e-a6ea-45a543774fae",
-	"start": 1639551158654,
-	"stop": 1639551178920,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "selenium",
-			"status": "passed",
-			"start": 1639551158658,
-			"stop": 1639551159139
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "a539e4f5-6f42-492e-a6ea-45a543774fae",
+    "start": 1639551158654,
+    "stop": 1639551178920,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "selenium",
+            "status": "passed",
+            "start": 1639551158658,
+            "stop": 1639551159139
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "ac641e0c-12aa-4753-877b-ddcf5419c371",
-	"start": 1639551151695,
-	"stop": 1639551180971,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "driver_kwargs",
-			"status": "passed",
-			"start": 1639551151695,
-			"stop": 1639551151696
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "ac641e0c-12aa-4753-877b-ddcf5419c371",
+    "start": 1639551151695,
+    "stop": 1639551180971,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "driver_kwargs",
+            "status": "passed",
+            "start": 1639551151695,
+            "stop": 1639551151696
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "982a1d0f-4b37-4ac1-95c2-c3b178d28b95",
-	"start": 1639551151689,
-	"stop": 1639551180985,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "chrome_options",
-			"status": "passed",
-			"start": 1639551151689,
-			"stop": 1639551151689
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "982a1d0f-4b37-4ac1-95c2-c3b178d28b95",
+    "start": 1639551151689,
+    "stop": 1639551180985,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "chrome_options",
+            "status": "passed",
+            "start": 1639551151689,
+            "stop": 1639551151689
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "25aa2ba6-d377-4517-a9fb-f20152d10529",
-	"start": 1639551151695,
-	"stop": 1639551180973,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "driver_log",
-			"status": "passed",
-			"start": 1639551151695,
-			"stop": 1639551151695
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "25aa2ba6-d377-4517-a9fb-f20152d10529",
+    "start": 1639551151695,
+    "stop": 1639551180973,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "driver_log",
+            "status": "passed",
+            "start": 1639551151695,
+            "stop": 1639551151695
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "fb2d4eb5-0d06-44ce-b500-685e786b9523",
-	"start": 1639551151689,
-	"stop": 1639551180993,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "variables",
-			"status": "passed",
-			"start": 1639551151689,
-			"stop": 1639551151689
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "fb2d4eb5-0d06-44ce-b500-685e786b9523",
+    "start": 1639551151689,
+    "stop": 1639551180993,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "variables",
+            "status": "passed",
+            "start": 1639551151689,
+            "stop": 1639551151689
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }
 {
-	"uuid": "a5f81a7c-1a07-4a37-91c7-4bf43549c5ba",
-	"start": 1639551172526,
-	"stop": 1639551178918,
-	"description": "NA",
-	"name": "NA",
-	"fullName": "NA",
-	"status": "NA",
-	"testCaseId": "NA",
-	"historyId": "NA",
-	"befores": [
-		{
-			"name": "selenium_generics",
-			"status": "passed",
-			"start": 1639551172526,
-			"stop": 1639551172527
-		}
-	],
-	"afters": [],
-	"children": [],
-	"attachments": [],
-	"labels": []
+    "uuid": "a5f81a7c-1a07-4a37-91c7-4bf43549c5ba",
+    "start": 1639551172526,
+    "stop": 1639551178918,
+    "description": "NA",
+    "name": "NA",
+    "fullName": "NA",
+    "status": "NA",
+    "testCaseId": "NA",
+    "historyId": "NA",
+    "befores": [
+        {
+            "name": "selenium_generics",
+            "status": "passed",
+            "start": 1639551172526,
+            "stop": 1639551172527
+        }
+    ],
+    "afters": [],
+    "children": [],
+    "attachments": [],
+    "labels": []
 }

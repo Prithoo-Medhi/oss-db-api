@@ -43,5 +43,5 @@ def upload_files_to_db():
 
 
 if __name__ == "__main__":
-    upload_files_to_db()
+    # upload_files_to_db()
     print(retrieve_from_db())
