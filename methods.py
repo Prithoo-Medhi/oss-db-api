@@ -176,6 +176,13 @@ def retrieve_from_db(db = SessionLocal()):
     entries = db.query(models.Results).all()
     for entry in entries:
         entry_list.append(serializers.resultmodel_to_resultchema(entry))
+    
+    # Write the output to a file:
+    with open('output/results.json', 'ta') as file:
+        for item in entry_list:
+            json.dump(item, file)
+            file.write(',\n')
+
     return entry_list
 
 if __name__ == "__main__":
