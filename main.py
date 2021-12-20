@@ -13,7 +13,6 @@ def file_list(directory=REPORT_PATH) -> list:
     '''
 
     files = [f for f in listdir(directory) if isfile(join(directory, f))]
-    # print(files)
     return files
 
 def lines_from_file(file: str):
@@ -29,7 +28,6 @@ def make_dict(file_name: str) -> dict:
     '''
     with open(file_name) as json_file:
         data = json.load(json_file)
-    # print(data)
     return data
 
 
@@ -46,7 +44,6 @@ def upload_files_to_db():
                 data_dict = make_dict(REPORT_PATH+file)
                 add_to_db(data_dict)
             elif file.endswith('.txt'):
-                # TODO: Add line parser and add each line to a row in 'txt_config' table.
                 lines_in_file = lines_from_file(REPORT_PATH+file)
                 for line in lines_in_file:
                     write_to_config(line)
