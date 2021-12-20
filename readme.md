@@ -1,3 +1,9 @@
+# Database ORM API:
+
+<p>
+A python module to read all json files in a given folder and split the key-value pairs in model.attribute-value pairs and then push the model objects into a relational database.
+</p>
+
 ### Usage:
 
 ```
