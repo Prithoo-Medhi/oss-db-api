@@ -11,6 +11,7 @@ import serializers
 import json
 from time import gmtime
 
+
 def add_to_befores(befores, uuid):
     '''
     Explodes the 'befores' list and adds each item to a new row in the befores_table.
@@ -18,8 +19,8 @@ def add_to_befores(befores, uuid):
     db = SessionLocal()
     for item in list(befores):
         new_row = models.Befores(
-            uuid = uuid,
-            data = json.dumps(item)
+            uuid=uuid,
+            data=json.dumps(item)
         )
         db.add(new_row)
         db.commit()
@@ -32,11 +33,12 @@ def add_to_afters(afters, uuid):
     db = SessionLocal()
     for item in list(afters):
         new_row = models.Afters(
-            uuid = uuid,
-            data = json.dumps(item)
+            uuid=uuid,
+            data=json.dumps(item)
         )
         db.add(new_row)
         db.commit()
+
 
 def add_to_children(children, uuid):
     '''
@@ -45,11 +47,12 @@ def add_to_children(children, uuid):
     db = SessionLocal()
     for item in list(children):
         new_row = models.Children(
-            uuid = uuid,
-            data = json.dumps(item)
+            uuid=uuid,
+            data=json.dumps(item)
         )
         db.add(new_row)
         db.commit()
+
 
 def add_to_attachments(attachments, uuid):
     '''
@@ -58,11 +61,12 @@ def add_to_attachments(attachments, uuid):
     db = SessionLocal()
     for item in list(attachments):
         new_row = models.Attachments(
-            uuid = uuid,
-            data = json.dumps(item)
+            uuid=uuid,
+            data=json.dumps(item)
         )
         db.add(new_row)
         db.commit()
+
 
 def add_to_labels(labels, uuid):
     '''
@@ -71,25 +75,26 @@ def add_to_labels(labels, uuid):
     db = SessionLocal()
     for item in list(labels):
         new_row = models.Labels(
-            uuid = uuid,
-            data = json.dumps(item)
+            uuid=uuid,
+            data=json.dumps(item)
         )
         db.add(new_row)
         db.commit()
 
-def write_to_config(line:str, db=SessionLocal()):
+
+def write_to_config(line: str, db=SessionLocal()):
     '''
     Writes to a row in the test-configuration file.
     '''
     new_row = models.TextConfig(
-        data = line
+        data=line
     )
 
     db.add(new_row)
     db.commit()
 
 
-def add_to_db(data: dict, db = SessionLocal()):
+def add_to_db(data: dict, db=SessionLocal()):
     '''
     Adds a new entry to the 'results' table.
     '''
@@ -107,12 +112,14 @@ def add_to_db(data: dict, db = SessionLocal()):
     if 'start' in key_list:
         # Because the start time is in milliseconds, we need to divide by 1000.
         start_stamp = data['start']/1000
-        start = datetime.datetime.fromtimestamp(start_stamp).strftime('%Y-%m-%d %H:%M:%S.%f')
+        start = datetime.datetime.fromtimestamp(
+            start_stamp).strftime('%Y-%m-%d %H:%M:%S.%f')
 
     if 'stop' in key_list:
         # Because the stop time is in milliseconds, we need to divide by 1000.
         stop_stamp = data['stop']/1000
-        stop = datetime.datetime.fromtimestamp(stop_stamp).strftime('%Y-%m-%d %H:%M:%S.%f')
+        stop = datetime.datetime.fromtimestamp(
+            stop_stamp).strftime('%Y-%m-%d %H:%M:%S.%f')
 
     if 'description' in key_list:
         description = data['description']
@@ -152,24 +159,23 @@ def add_to_db(data: dict, db = SessionLocal()):
         labels = True
         add_to_children(data['labels'], data['uuid'])
 
-
     # Committing to the 'results' table.
     new_entry = models.Results(
-        uuid = uuid,
-        start = start,
-        stop = stop,
-        description = description,
-        name = name,
-        fullName = fullName,
-        status = status,
-        testCaseId = testCaseId,
-        historyId = historyId,
+        uuid=uuid,
+        start=start,
+        stop=stop,
+        description=description,
+        name=name,
+        fullName=fullName,
+        status=status,
+        testCaseId=testCaseId,
+        historyId=historyId,
         # Array of booleans
-        befores = befores,
-        afters = afters,
-        children = children,
-        attachments = attachments,
-        labels = labels
+        befores=befores,
+        afters=afters,
+        children=children,
+        attachments=attachments,
+        labels=labels
     )
 
     db.add(new_entry)
@@ -179,7 +185,8 @@ def add_to_db(data: dict, db = SessionLocal()):
 
 # TODO: Add a method to push to 'txt_config' table.
 
-def retrieve_from_db(db = SessionLocal()):
+
+def retrieve_from_db(db=SessionLocal()):
     '''
     Retrieves all rows from the 'results' table.
     '''
@@ -189,7 +196,7 @@ def retrieve_from_db(db = SessionLocal()):
 
     for entry in entries:
         entry_list.append(serializers.resultmodel_to_resultchema(entry))
-    
+
     # Write the output to a file:
     with open('output/results.json', 'wt') as file:
         for item in entry_list:

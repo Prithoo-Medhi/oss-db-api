@@ -6,12 +6,15 @@ import models
 import json
 from datetime import datetime
 
+
 def model_to_dict(model: any):
     """
     Converts a model to a dictionary.
     """
-    body = {key : model.__dict__[key] for key in model.__dict__.keys() if not key.endswith('_id')}
+    body = {key: model.__dict__[key]
+            for key in model.__dict__.keys() if not key.endswith('_id')}
     return body
+
 
 def resultmodel_to_resultchema(model: models.Results) -> dict:
     """
@@ -26,27 +29,32 @@ def resultmodel_to_resultchema(model: models.Results) -> dict:
     labels_model = []
 
     if model.befores:
-        before_objects = db.query(models.Befores).filter(models.Befores.uuid == model.uuid).all()
+        before_objects = db.query(models.Befores).filter(
+            models.Befores.uuid == model.uuid).all()
         for item in before_objects:
             before_model.append(json.loads(item.data))
 
     if model.afters:
-        after_objects = db.query(models.Afters).filter(models.Afters.uuid == model.uuid).all()
+        after_objects = db.query(models.Afters).filter(
+            models.Afters.uuid == model.uuid).all()
         for item in after_objects:
             after_model.append(json.loads(item.data))
 
     if model.children:
-        children_objects = db.query(models.Children).filter(models.Children.uuid == model.uuid).all()
+        children_objects = db.query(models.Children).filter(
+            models.Children.uuid == model.uuid).all()
         for item in children_objects:
             children_model.append(json.loads(item.data))
 
     if model.attachments:
-        attachments_objects = db.query(models.Attachments).filter(models.Attachments.uuid == model.uuid).all()
+        attachments_objects = db.query(models.Attachments).filter(
+            models.Attachments.uuid == model.uuid).all()
         for item in attachments_objects:
             attachments_model.append(json.loads(item.data))
-    
+
     if model.labels:
-        labels_objects = db.query(models.Labels).filter(models.Labels.uuid == model.uuid).all()
+        labels_objects = db.query(models.Labels).filter(
+            models.Labels.uuid == model.uuid).all()
         for item in labels_objects:
             labels_model.append(json.loads(item.data))
 

@@ -14,16 +14,14 @@ import psycopg2
 load_dotenv()
 
 DB_TYPE = os.environ['DB_TYPE']
-PGHOST=os.environ['PGHOST']
-PGPORT=os.environ['PGPORT']
-PGDATABASE=os.environ['PGDATABASE']
-PGUSER=os.environ['PGUSER']
-PGPASSWORD=os.environ['PGPASSWORD']
+PGHOST = os.environ['PGHOST']
+PGPORT = os.environ['PGPORT']
+PGDATABASE = os.environ['PGDATABASE']
+PGUSER = os.environ['PGUSER']
+PGPASSWORD = os.environ['PGPASSWORD']
 
 SQLALCHEMY_DATABASE_URI = f"postgresql+psycopg2://{PGUSER}:{PGPASSWORD}@{PGHOST}:{PGPORT}/{PGDATABASE}"
 engine = create_engine(SQLALCHEMY_DATABASE_URI, pool_size=200)
-
-
 
 
 SessionLocal = sessionmaker(autocommit=False, bind=engine)

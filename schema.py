@@ -6,6 +6,7 @@ from pydantic import BaseModel
 import datetime
 from typing import List
 
+
 class Results(BaseModel):
     '''
     Schema to serialize the Results model.
