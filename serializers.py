@@ -4,6 +4,7 @@ Contains psuedo-serializers for the system.
 from database import SessionLocal
 import models
 import json
+from datetime import datetime
 
 def model_to_dict(model: any):
     """
@@ -51,8 +52,8 @@ def resultmodel_to_resultchema(model: models.Results) -> dict:
 
     body = {
         'uuid': model.uuid,
-        'start': model.start,
-        'stop': model.stop,
+        'start': datetime.timestamp(model.start),
+        'stop': datetime.timestamp(model.stop),
         'description': model.description,
         'name': model.name,
         'fullName': model.fullName,
