@@ -78,6 +78,8 @@ class Labels(Base):
     uuid = Column(String)
     data = Column(String)
 
+# TODO: Add the 'txt_config' model for the database.
+
 
 
 

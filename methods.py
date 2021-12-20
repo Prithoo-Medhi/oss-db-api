@@ -164,6 +164,8 @@ def add_to_db(data: dict, db = SessionLocal()):
     db.refresh(new_entry)
     print(new_entry)
 
+# TODO: Add a method to push to 'txt_config' table.
+
 def retrieve_from_db(db = SessionLocal()):
     """
     Retrieves all entries from the table.

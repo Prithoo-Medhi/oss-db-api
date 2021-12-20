@@ -25,13 +25,17 @@ def make_dict(file_name: str) -> dict:
 
 def main():
     '''
-    Main function.
+    Main function: Scrapes allure report files and adds them to the database.
+    Also, if the read file has the extension '.txt', it will be added to the text_config table.
     '''
     files = file_list()
     for file in files:
-        data_dict = make_dict(BASE_PATH+file)
-        add_to_db(data_dict)
-
+        if file.endswith('.json'):
+            data_dict = make_dict(BASE_PATH+file)
+            add_to_db(data_dict)
+        elif file.endswith('.txt'):
+            pass
+            # TODO: Add text_config table insertion.
 if __name__ == "__main__":
     # main()
     print(retrieve_from_db())

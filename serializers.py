@@ -3,6 +3,7 @@ Contains psuedo-serializers for the system.
 '''
 from database import SessionLocal
 import models
+import json
 
 def model_to_dict(model: any):
     """
@@ -26,27 +27,27 @@ def resultmodel_to_resultchema(model: models.Results) -> dict:
     if model.befores:
         before_objects = db.query(models.Befores).filter(models.Befores.uuid == model.uuid).all()
         for item in before_objects:
-            before_model.append(item.data)
+            before_model.append(json.loads(item.data))
 
     if model.afters:
         after_objects = db.query(models.Afters).filter(models.Afters.uuid == model.uuid).all()
         for item in after_objects:
-            after_model.append(item.data)
+            after_model.append(json.loads(item.data))
 
     if model.children:
         children_objects = db.query(models.Children).filter(models.Children.uuid == model.uuid).all()
         for item in children_objects:
-            children_model.append(item.data)
+            children_model.append(json.loads(item.data))
 
     if model.attachments:
         attachments_objects = db.query(models.Attachments).filter(models.Attachments.uuid == model.uuid).all()
         for item in attachments_objects:
-            attachments_model.append(item.data)
+            attachments_model.append(json.loads(item.data))
     
     if model.labels:
         labels_objects = db.query(models.Labels).filter(models.Labels.uuid == model.uuid).all()
         for item in labels_objects:
-            labels_model.append(item.data)
+            labels_model.append(json.loads(item.data))
 
     body = {
         'uuid': model.uuid,
