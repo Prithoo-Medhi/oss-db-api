@@ -16,6 +16,9 @@ def file_list(directory=REPORT_PATH) -> list:
     return files
 
 def lines_from_file(file: str):
+    '''
+    Returns a list of all the lines in the file as iterables.
+    '''
     lines = []
     with open(file, 'rt') as f:
         lines.append(f.readlines())
