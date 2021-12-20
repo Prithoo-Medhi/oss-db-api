@@ -16,6 +16,12 @@ def file_list(directory=REPORT_PATH) -> list:
     # print(files)
     return files
 
+def lines_from_file(file: str):
+    lines = []
+    with open(file, 'rt') as f:
+        lines.append(f.readlines())
+    return lines
+
 
 def make_dict(file_name: str) -> dict:
     '''
@@ -33,15 +39,22 @@ def upload_files_to_db():
     Also, if the read file has the extension '.txt', it will be added to the text_config table.
     '''
     files = file_list()
-    for file in files:
-        if file.endswith('.json'):
-            data_dict = make_dict(REPORT_PATH+file)
-            add_to_db(data_dict)
-        elif file.endswith('.txt'):
-            # TODO: Add line parser and add each line to a row in 'txt_config' table.
-            pass
+
+    try:
+        for file in files:
+            if file.endswith('.json'):
+                data_dict = make_dict(REPORT_PATH+file)
+                add_to_db(data_dict)
+            elif file.endswith('.txt'):
+                # TODO: Add line parser and add each line to a row in 'txt_config' table.
+                lines_in_file = lines_from_file(REPORT_PATH+file)
+                for line in lines_in_file:
+                    write_to_config(line)
+        
+    except Exception as err:
+        print(f'Could not upload to database. Err: {err}')
 
 
 if __name__ == "__main__":
-    # upload_files_to_db()
+    upload_files_to_db()
     print(retrieve_from_db())
