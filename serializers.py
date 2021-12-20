@@ -52,8 +52,8 @@ def resultmodel_to_resultchema(model: models.Results) -> dict:
 
     body = {
         'uuid': model.uuid,
-        'start': datetime.timestamp(model.start),
-        'stop': datetime.timestamp(model.stop),
+        'start': int(datetime.timestamp(model.start))*1000,
+        'stop': int(datetime.timestamp(model.stop))*1000,
         'description': model.description,
         'name': model.name,
         'fullName': model.fullName,
