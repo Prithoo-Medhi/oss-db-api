@@ -50,10 +50,11 @@ def resultmodel_to_resultchema(model: models.Results) -> dict:
         for item in labels_objects:
             labels_model.append(json.loads(item.data))
 
+    # Translates the retrieved model.attribute-value pairs to key-value pairs in a dictionary.
     body = {
         'uuid': model.uuid,
-        'start': int(datetime.timestamp(model.start))*1000,
-        'stop': int(datetime.timestamp(model.stop))*1000,
+        'start': int(float(datetime.timestamp(model.start))*1000),
+        'stop': int(float(datetime.timestamp(model.stop))*1000),
         'description': model.description,
         'name': model.name,
         'fullName': model.fullName,

@@ -77,6 +77,17 @@ def add_to_labels(labels, uuid):
         db.add(new_row)
         db.commit()
 
+def write_to_config(line:str, db=SessionLocal()):
+    '''
+    Writes to a row in the test-configuration file.
+    '''
+    new_row = models.TextConfig(
+        data = line
+    )
+
+    db.add(new_row)
+    db.commit()
+
 
 def add_to_db(data: dict, db = SessionLocal()):
     '''
@@ -174,16 +185,19 @@ def retrieve_from_db(db = SessionLocal()):
     '''
     entry_list = []
     entries = db.query(models.Results).all()
+    # print(entries)
+
     for entry in entries:
         entry_list.append(serializers.resultmodel_to_resultchema(entry))
     
     # Write the output to a file:
-    with open('output/results.json', 'ta') as file:
+    with open('output/results.json', 'wt') as file:
         for item in entry_list:
             json.dump(item, file)
-            file.write(',\n')
+            file.write('\n')
 
     return entry_list
+
 
 if __name__ == "__main__":
     # TODO: Add test execution.

@@ -1,11 +1,12 @@
-from os import listdir
+from os import listdir, getuid
 from os.path import isfile, join
-from methods import add_to_db, retrieve_from_db
+from methods import add_to_db, retrieve_from_db, write_to_config
 import json
+import pwd
 
-BASE_PATH = 'allureReport/'
+REPORT_PATH = f'/home/{pwd.getpwuid(getuid())[0]}/Coding/oss-db-api/allureReport/'
 
-def file_list(directory='allureReport') -> list:
+def file_list(directory=REPORT_PATH) -> list:
     '''
     Returns a list of all files in the specified directory.
     '''
@@ -31,11 +32,11 @@ def main():
     files = file_list()
     for file in files:
         if file.endswith('.json'):
-            data_dict = make_dict(BASE_PATH+file)
+            data_dict = make_dict(REPORT_PATH+file)
             add_to_db(data_dict)
         elif file.endswith('.txt'):
+            # TODO: Add line parser and add each line to a row in 'txt_config' table.
             pass
-            # TODO: Add text_config table insertion.
 if __name__ == "__main__":
     # main()
     print(retrieve_from_db())

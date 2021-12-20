@@ -78,7 +78,15 @@ class Labels(Base):
     uuid = Column(String)
     data = Column(String)
 
-# TODO: Add the 'txt_config' model for the database.
+class TextConfig(Base):
+    '''
+    Model to contain the parsed text-lines from the test-configuration '.txt' files.
+    '''
+
+    __tablename__ = 'txt_config'
+
+    conf_id = Column(Integer, primary_key=True, index=True)
+    data = Column(String)
 
 
 

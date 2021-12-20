@@ -138,3 +138,6 @@ vscode/
 # Image project files
 *.xcf
 *.psd
+
+# Report Files
+allureReport/
