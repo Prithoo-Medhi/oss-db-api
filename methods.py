@@ -170,7 +170,7 @@ def add_to_db(data: dict, db=SessionLocal()):
         status=status,
         testCaseId=testCaseId,
         historyId=historyId,
-        # Array of booleans
+        # Array of booleans if Array exists
         befores=befores,
         afters=afters,
         children=children,
@@ -180,11 +180,6 @@ def add_to_db(data: dict, db=SessionLocal()):
 
     db.add(new_entry)
     db.commit()
-    # db.refresh(new_entry)
-    # print(new_entry)
-
-# TODO: Add a method to push to 'txt_config' table.
-
 
 def retrieve_from_db(db=SessionLocal()):
     '''
@@ -197,7 +192,7 @@ def retrieve_from_db(db=SessionLocal()):
     for entry in entries:
         entry_list.append(serializers.resultmodel_to_resultchema(entry))
 
-    # Write the output to as list of JSON to a file:
+    # Write the output as a list of JSON to a file:
     with open('output/results.json', 'wt') as file:
         json.dump(entry_list, file)
 
