@@ -192,15 +192,15 @@ def retrieve_from_db(db=SessionLocal()):
     for entry in entries:
         entry_list.append(serializers.resultmodel_to_resultchema(entry))
 
-    # Write the output as a list of JSON to a file:
-    with open('output/results.json', 'wt') as file:
-        json.dump(entry_list, file)
+    # Write the output as a list of JSON to a single file:
+    # with open(f'output/results.json', 'wt') as file:
+    #     json.dump(entry_list, file)
 
-    # Write the output to a file: (Prototype code)
-    # with open('output/results.json', 'wt') as file:
-    #     for item in entry_list:
-    #         json.dump(item, file)
-    #         file.write('\n')
+    # Write the output to a list of files: (Prototype code)
+    for item in entry_list:
+        with open(f'output/{item["uuid"]}.json', 'wt') as file:
+            json.dump(item, file)
+            # file.write('\n')
 
     return entry_list
 

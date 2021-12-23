@@ -1,18 +1,21 @@
-from os import listdir, getuid
-from os.path import isfile, join
+from os import listdir, sep #, getuid
+from os.path import isfile
 from methods import add_to_db, retrieve_from_db, write_to_config
 import json
-import pwd
+# import pwd
 
-REPORT_PATH = f'/home/{pwd.getpwuid(getuid())[0]}/Coding/oss-db-api/allureReport/'
+## For Linux:
+# REPORT_PATH = f'/home/{pwd.getpwuid(getuid())[0]}/Coding/oss-db-api/allureReport/'
+
+## For Windows:
+REPORT_PATH = f"D:{sep}Libraries{sep}Arkiralor's Documents{sep}Programs{sep}gits{sep}oss-db-api{sep}allureReport{sep}"
 
 
 def file_list(directory=REPORT_PATH) -> list:
     '''
     Returns a list of all files in the specified directory.
     '''
-
-    files = [f for f in listdir(directory) if isfile(join(directory, f))]
+    files = [f for f in listdir(directory) if isfile(directory+f)]
     return files
 
 def lines_from_file(file: str):
