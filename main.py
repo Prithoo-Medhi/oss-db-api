@@ -5,7 +5,7 @@ import json
 # import pwd
 
 ## For Linux:
-# REPORT_PATH = f'/home/{pwd.getpwuid(getuid())[0]}/Coding/oss-db-api/allureReport/'
+REPORT_PATH = f'{sep}home{sep}{pwd.getpwuid(getuid())[0]}{sep}Coding{sep}oss-db-api{sep}allureReport{sep}'
 
 ## For Windows:
 REPORT_PATH = f"D:{sep}Libraries{sep}Arkiralor's Documents{sep}Programs{sep}gits{sep}oss-db-api{sep}allureReport{sep}"
