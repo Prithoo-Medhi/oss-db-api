@@ -13,6 +13,7 @@ class Results(Base):
     __tablename__ = 'results'
 
     uuid = Column(String, primary_key=True, index=True)
+    filename = Column(String)
     start = Column(DateTime)
     stop = Column(DateTime)  
     description = Column(String)

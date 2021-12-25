@@ -4,14 +4,15 @@ from methods import add_to_db, retrieve_from_db, write_to_config
 import json
 from typing import List
 ## For Linux:
-import pwd
-from os import getuid
+# import pwd
+# from os import getuid
 
 ## For Linux:
-REPORT_PATH = f'{sep}home{sep}{pwd.getpwuid(getuid())[0]}{sep}Coding{sep}oss-db-api{sep}allureReport{sep}'
+# REPORT_PATH = f'{sep}home{sep}{pwd.getpwuid(getuid())[0]}{sep}Coding{sep}oss-db-api{sep}allureReport{sep}'
 
 ## For Windows:
-# REPORT_PATH = f"D:{sep}Libraries{sep}Arkiralor's Documents{sep}Programs{sep}gits{sep}oss-db-api{sep}allureReport{sep}"
+REPORT_PATH = f"D:{sep}Libraries{sep}Arkiralor's Documents{sep}Programs{sep}gits{sep}oss-db-api{sep}allureReport{sep}"
+# REPORT_PATH = f"allureReport{sep}"
 
 
 def file_list(directory=REPORT_PATH) -> list:
@@ -37,6 +38,9 @@ def make_dict(file_name: str) -> dict:
     '''
     with open(file_name) as json_file:
         data = json.load(json_file)
+    name = file_name.split(sep)
+    name = name[len(name)-1]
+    data['filename'] = name
     return data
 
 
@@ -65,12 +69,14 @@ def write_to_files(files: List[dict]):
     Write the output to a list of files.
     '''
     for item in files:
-        with open(f'output/{item["uuid"]}.json', 'wt') as file:
+        with open(f'output/{item["filename"]}', 'wt') as file:
+            del item['filename']
             json.dump(item, file)
+
 
 
 if __name__ == "__main__":
     # upload_files_to_db()
     opt = retrieve_from_db()
     write_to_files(opt)
-    print(opt)
+    # print(opt)

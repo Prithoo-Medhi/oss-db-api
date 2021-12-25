@@ -61,6 +61,7 @@ def resultmodel_to_resultchema(model: models.Results) -> dict:
     # Translates the retrieved model.attribute-value pairs to key-value pairs in a dictionary.
     body = {
         'uuid': model.uuid,
+        'filename': model.filename,
         'start': int(float(datetime.timestamp(model.start))*1000),
         'stop': int(float(datetime.timestamp(model.stop))*1000),
         'description': model.description,
