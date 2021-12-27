@@ -4,14 +4,14 @@ from methods import add_to_db, retrieve_from_db, write_to_config
 import json
 from typing import List
 ## For Linux:
-# import pwd
-# from os import getuid
+import pwd
+from os import getuid
 
 ## For Linux:
-# REPORT_PATH = f'{sep}home{sep}{pwd.getpwuid(getuid())[0]}{sep}Coding{sep}oss-db-api{sep}allureReport{sep}'
+REPORT_PATH = f'{sep}home{sep}{pwd.getpwuid(getuid())[0]}{sep}Coding{sep}oss-db-api{sep}allureReport{sep}'
 
 ## For Windows:
-REPORT_PATH = f"D:{sep}Libraries{sep}Arkiralor's Documents{sep}Programs{sep}gits{sep}oss-db-api{sep}allureReport{sep}"
+# REPORT_PATH = f"D:{sep}Libraries{sep}Arkiralor's Documents{sep}Programs{sep}gits{sep}oss-db-api{sep}allureReport{sep}"
 # REPORT_PATH = f"allureReport{sep}"
 
 

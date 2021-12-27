@@ -21,7 +21,7 @@ PGUSER = os.environ['PGUSER']
 PGPASSWORD = os.environ['PGPASSWORD']
 
 SQLALCHEMY_DATABASE_URI = f"postgresql+psycopg2://{PGUSER}:{PGPASSWORD}@{PGHOST}:{PGPORT}/{PGDATABASE}"
-engine = create_engine(SQLALCHEMY_DATABASE_URI, pool_size=200)
+engine = create_engine(SQLALCHEMY_DATABASE_URI, pool_size=20)
 
 
 SessionLocal = sessionmaker(autocommit=False, bind=engine)

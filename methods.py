@@ -103,9 +103,9 @@ def add_to_db(data: dict, db=SessionLocal()):
     # Initializing with default values.
     uuid = data['uuid']
     filename = data['filename']
-    start, stop, status = 0, 0, 'NA'
-    description, name, fullName = 'NA', 'NA', 'NA'
-    testCaseId, historyId = 'NA', 'NA'
+    start, stop, status = 0, 0, ''
+    description, name, fullName = '', '', ''
+    testCaseId, historyId = '', ''
     befores, afters, children = False, False, False
     attachments, labels = False, False
 
