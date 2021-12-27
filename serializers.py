@@ -30,31 +30,31 @@ def resultmodel_to_resultchema(model: models.Results) -> dict:
 
     if model.befores == True:
         before_objects = db.query(models.Befores).filter(models.Befores.uuid == model.uuid).all()
-        print(f"Befores for {model.uuid}: {before_objects}")
+        # print(f"Befores for {model.uuid}: {before_objects}")
         for item in before_objects:
             before_model.append(json.loads(item.data))
 
     if model.afters == True:
         after_objects = db.query(models.Afters).filter(models.Afters.uuid == model.uuid).all()
-        print(f"Afters for {model.uuid}: {after_objects}")
+        # print(f"Afters for {model.uuid}: {after_objects}")
         for item in after_objects:
             after_model.append(json.loads(item.data))
 
     if model.children == True:
         children_objects = db.query(models.Children).filter(models.Children.uuid == model.uuid).all()
-        print(f"Children for {model.uuid}: {children_objects}")
+        # print(f"Children for {model.uuid}: {children_objects}")
         for item in children_objects:
             children_model.append(json.loads(item.data))
 
     if model.attachments == True:
         attachments_objects = db.query(models.Attachments).filter(models.Attachments.uuid == model.uuid).all()
-        print(f"Attachments for {model.uuid}: {attachments_objects}")
+        # print(f"Attachments for {model.uuid}: {attachments_objects}")
         for item in attachments_objects:
             attachments_model.append(json.loads(item.data))
 
     if model.labels == True:
         labels_objects = db.query(models.Labels).filter(models.Labels.uuid == model.uuid).all()
-        print(f"Labels for {model.uuid}: {labels_objects}")
+        # print(f"Labels for {model.uuid}: {labels_objects}")
         for item in labels_objects:
             labels_model.append(json.loads(item.data))
 

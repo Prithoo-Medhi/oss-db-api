@@ -113,8 +113,6 @@ def add_to_db(data: dict, db=SessionLocal()):
     key_list = data.keys()
 
     # If a key is found in the dictionary, pull the corresponding value.
-    # if 'uuid' in key_list:
-    #     uuid = data['uuid']
 
     if 'start' in key_list:
         # Because the start time is in milliseconds, we need to divide by 1000.
@@ -149,27 +147,27 @@ def add_to_db(data: dict, db=SessionLocal()):
     # Array type Columns.
     if 'befores' in key_list:
         befores = True
-        print(f"\nBefores for {data['uuid']}: {data['befores']}")
+        # print(f"\nBefores for {data['uuid']}: {data['befores']}")
         add_to_befores(data['befores'], data['uuid'])
 
     if 'afters' in key_list:
         afters = True
-        print(f"\nAfters for {data['uuid']}: {data['afters']}")
+        # print(f"\nAfters for {data['uuid']}: {data['afters']}")
         add_to_afters(data['afters'], data['uuid'])
 
     if 'children' in key_list:
         children = True
-        print(f"\nChildren for {data['uuid']}: {data['children']}")
+        # print(f"\nChildren for {data['uuid']}: {data['children']}")
         add_to_children(data['children'], data['uuid'])
 
     if 'attachments' in key_list:
         attachments = True
-        print(f"\nAttachments for {data['uuid']}: {data['attachments']}")
+        # print(f"\nAttachments for {data['uuid']}: {data['attachments']}")
         add_to_attachments(data['attachments'], data['uuid'])
 
     if 'labels' in key_list:
         labels = True
-        print(f"\nLabels for {data['uuid']}: {data['labels']}")
+        # print(f"\nLabels for {data['uuid']}: {data['labels']}")
         add_to_labels(data['labels'], data['uuid'])
 
     # Committing to the 'results' table.
