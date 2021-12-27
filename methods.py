@@ -12,7 +12,7 @@ import json
 from time import gmtime
 
 
-def add_to_befores(befores, uuid):
+def add_to_befores(befores: List[any], uuid):
     '''
     Explodes the 'befores' list and adds each item to a new row in the befores_table.
     '''
@@ -26,7 +26,7 @@ def add_to_befores(befores, uuid):
         db.commit()
 
 
-def add_to_afters(afters, uuid):
+def add_to_afters(afters: List[any], uuid):
     '''
     Explodes the 'afters' list and adds each item to a new row in the afters_table.
     '''
@@ -40,7 +40,7 @@ def add_to_afters(afters, uuid):
         db.commit()
 
 
-def add_to_children(children, uuid):
+def add_to_children(children: List[any], uuid):
     '''
     Explodes the 'children' list and adds each item to a new row in the children_table.
     '''
@@ -54,29 +54,31 @@ def add_to_children(children, uuid):
         db.commit()
 
 
-def add_to_attachments(attachments, uuid):
+def add_to_attachments(attachments: List[any], uuid):
     '''
     Explodes the 'attachments' list and adds each item to a new row in the attachments_table.
     '''
     db = SessionLocal()
-    for item in list(attachments):
+    for attachment in attachments:
+        print(f"attachment: {attachment}")
         new_row = models.Attachments(
             uuid=uuid,
-            data=json.dumps(item)
+            data=json.dumps(attachment)
         )
         db.add(new_row)
         db.commit()
 
 
-def add_to_labels(labels, uuid):
+def add_to_labels(labels: List[any], uuid):
     '''
     Explodes the 'labels' list and adds each item to a new row in the labels_table.
     '''
     db = SessionLocal()
-    for item in list(labels):
+    for label in labels:
+        print(f"label: {label}")
         new_row = models.Labels(
             uuid=uuid,
-            data=json.dumps(item)
+            data=json.dumps(label)
         )
         db.add(new_row)
         db.commit()
@@ -98,7 +100,6 @@ def add_to_db(data: dict, db=SessionLocal()):
     '''
     Adds a new entry to the 'results' table.
     '''
-    key_list = data.keys()
 
     # Initializing with default values.
     uuid = data['uuid']
@@ -109,7 +110,12 @@ def add_to_db(data: dict, db=SessionLocal()):
     befores, afters, children = False, False, False
     attachments, labels = False, False
 
+    key_list = data.keys()
+
     # If a key is found in the dictionary, pull the corresponding value.
+    # if 'uuid' in key_list:
+    #     uuid = data['uuid']
+
     if 'start' in key_list:
         # Because the start time is in milliseconds, we need to divide by 1000.
         start_stamp = data['start']/1000
@@ -143,27 +149,32 @@ def add_to_db(data: dict, db=SessionLocal()):
     # Array type Columns.
     if 'befores' in key_list:
         befores = True
+        print(f"\nBefores for {data['uuid']}: {data['befores']}")
         add_to_befores(data['befores'], data['uuid'])
 
     if 'afters' in key_list:
         afters = True
+        print(f"\nAfters for {data['uuid']}: {data['afters']}")
         add_to_afters(data['afters'], data['uuid'])
 
     if 'children' in key_list:
         children = True
+        print(f"\nChildren for {data['uuid']}: {data['children']}")
         add_to_children(data['children'], data['uuid'])
 
     if 'attachments' in key_list:
         attachments = True
-        add_to_children(data['attachments'], data['uuid'])
+        print(f"\nAttachments for {data['uuid']}: {data['attachments']}")
+        add_to_attachments(data['attachments'], data['uuid'])
 
     if 'labels' in key_list:
         labels = True
-        add_to_children(data['labels'], data['uuid'])
+        print(f"\nLabels for {data['uuid']}: {data['labels']}")
+        add_to_labels(data['labels'], data['uuid'])
 
     # Committing to the 'results' table.
     new_entry = models.Results(
-        uuid=uuid,
+        uuid=data['uuid'],
         filename=filename,
         start=start,
         stop=stop,

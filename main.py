@@ -50,9 +50,9 @@ def upload_files_to_db():
     Also, if the read file has the extension '.txt', it will be added to the text_config table.
     '''
     files = file_list()
-
-    try:
-        for file in files:
+    
+    for file in files:
+        try:
             if file.endswith('.json'):
                 data_dict = make_dict(REPORT_PATH+file)
                 add_to_db(data_dict)
@@ -61,8 +61,8 @@ def upload_files_to_db():
                 for line in lines_in_file:
                     write_to_config(line)
         
-    except Exception as err:
-        print(f'Could not upload to database. Err: {err}')
+        except Exception as err:
+            print(f'Could not upload to database. Err: {err}')
 
 def write_to_files(files: List[dict]):
     '''
