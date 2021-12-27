@@ -4,6 +4,11 @@
 A python module to read all json files in a given folder and split the key-value pairs into model.attribute-value pairs and then push the model objects into a relational database.
 </p>
 
+### Functionality:
+
+1. Parse through each '*.json' file and input the key-value pairs to the appropriate collumns in the appropriate tables.
+2. Retrieve the data from the database tables and reconstruct the files with the original filenames.
+
 ### Usage:
 
 ```
