@@ -79,4 +79,4 @@ if __name__ == "__main__":
     # upload_files_to_db()
     opt = retrieve_from_db()
     write_to_files(opt)
-    # print(opt)
+    print(opt)
