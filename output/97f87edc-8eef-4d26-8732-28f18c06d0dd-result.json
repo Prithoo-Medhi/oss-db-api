@@ -1,1 +1,84 @@
-{"uuid": "c853478b-ef4d-48ed-9887-83379d6d32fd", "start": 1639551151687, "stop": 1639551178347, "description": "/home/rickey/Documents/techvariable/itt/OSS-Pytest-Plugin/temp/WorkingDir/tests-automation/custom_project/features/functional/sample.feature: OSS-TC-007: Particular element screenshot", "name": "test_osstc007_particular_element_screenshot", "fullName": "custom_project.step_definitions.test_application#test_osstc007_particular_element_screenshot", "status": "passed", "testCaseId": "44bd4c1b5197487e69f4dd2c988c0a99", "historyId": "d07436d65405c3b51055cb1d8ea2a4b8", "befores": [], "afters": [], "children": [], "attachments": [{"name": "log", "source": "501000c5-c211-4d0a-8054-12736274e210-attachment.txt", "type": "text/plain"}, {"name": "stdout", "source": "258d89c0-509e-4ad6-94d0-8efb2eac8335-attachment.txt", "type": "text/plain"}], "labels": [{"name": "tag", "value": "oss-pytest-plugin-demo"}, {"name": "tag", "value": "web"}, {"name": "tag", "value": "mobile-web"}, {"name": "tag", "value": "automated"}, {"name": "tag", "value": "@pytest.mark.usefixtures"}, {"name": "tag", "value": "nondestructive"}, {"name": "tag", "value": "TC-007-SC-A"}, {"name": "parentSuite", "value": "custom_project.step_definitions"}, {"name": "suite", "value": "test_application"}, {"name": "host", "value": "LenovoS145"}, {"name": "thread", "value": "57466-MainThread"}, {"name": "framework", "value": "pytest"}, {"name": "language", "value": "cpython3"}, {"name": "package", "value": "custom_project.step_definitions.test_application"}]}
+{
+	"uuid": "c853478b-ef4d-48ed-9887-83379d6d32fd", 
+	"start": 1639551151687, 
+	"stop": 1639551178347, 
+	"description": "/home/rickey/Documents/techvariable/itt/OSS-Pytest-Plugin/temp/WorkingDir/tests-automation/custom_project/features/functional/sample.feature: OSS-TC-007: Particular element screenshot", 
+	"name": "test_osstc007_particular_element_screenshot", 
+	"fullName": "custom_project.step_definitions.test_application#test_osstc007_particular_element_screenshot", 
+	"status": "passed", 
+	"testCaseId": "44bd4c1b5197487e69f4dd2c988c0a99", 
+	"historyId": "d07436d65405c3b51055cb1d8ea2a4b8", 
+	"befores": [], 
+	"afters": [], 
+	"children": [], 
+	"attachments": [
+		{
+			"name": "log", 
+			"source": "501000c5-c211-4d0a-8054-12736274e210-attachment.txt", 
+			"type": "text/plain"
+		}, 
+		{
+			"name": "stdout", 
+			"source": "258d89c0-509e-4ad6-94d0-8efb2eac8335-attachment.txt", 
+			"type": "text/plain"
+		}
+	], 
+	"labels": [
+		{
+			"name": "tag", 
+			"value": "oss-pytest-plugin-demo"
+		}, 
+		{
+			"name": "tag", 
+			"value": "web"
+		}, 
+		{
+			"name": "tag", 
+			"value": "mobile-web"
+		}, 
+		{
+			"name": "tag", 
+			"value": "automated"
+		}, 
+		{
+			"name": "tag", 
+			"value": "@pytest.mark.usefixtures"
+		}, 
+		{
+			"name": "tag", 
+			"value": "nondestructive"
+		}, 
+		{
+			"name": "tag", 
+			"value": "TC-007-SC-A"
+		}, 
+		{
+			"name": "parentSuite", 
+			"value": "custom_project.step_definitions"
+		}, 
+		{
+			"name": "suite", 
+			"value": "test_application"
+		}, 
+		{
+			"name": "host", 
+			"value": "LenovoS145"
+		}, 
+		{
+			"name": "thread",
+			"value": "57466-MainThread"
+		}, 
+		{
+			"name": "framework", 
+			"value": "pytest"
+		}, 
+		{
+			"name": "language", 
+			"value": "cpython3"
+		}, 
+		{
+			"name": "package", 
+			"value": "custom_project.step_definitions.test_application"
+		}
+	]
+}
